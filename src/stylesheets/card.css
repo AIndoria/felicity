@@ -1,0 +1,24 @@
+.Card {
+  height: 15rem;
+  width: 21rem;
+  display: flex;
+  border: 1px solid grey;
+}
+.Card__Listings {
+  padding-left: 1rem;
+  flex: 3;
+}
+
+.Card__Listings span {
+  padding-left: 2rem;
+}
+.Card__Title {
+  flex: 1;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  font-weight: 600;
+  color: lightgreen;
+  font-size: 1.3rem;
+}
