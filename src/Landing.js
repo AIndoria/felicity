@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./stylesheets/Landing.css";
+import "./stylesheets/Landing.scss";
 import Card from "./Card";
 import Flicker from "./scripts/Flicker";
 import FlickerText from "./scripts/FlickerText";
@@ -233,6 +233,14 @@ function Landing() {
           hkdrate={inrRate.HKD}
           inrrate={inrRate.INR}
         ></Card>
+      </div>
+      <div className="animation">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
   );
