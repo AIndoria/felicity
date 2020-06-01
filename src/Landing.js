@@ -33,14 +33,15 @@ function Landing() {
     loadINRates();
     loadHKRates();
     loadGBRates();
-    // setInterval(() => { //disabled while testing
-    //   loadRates();
-    //   loadEURates();
-    //   loadJPRates();
-    //   loadINRates();
-    //   loadHKRates();
-    //   loadGBRates();
-    // }, 60000);
+    setInterval(() => {
+      //disabled while testing
+      loadRates();
+      loadEURates();
+      loadJPRates();
+      loadINRates();
+      loadHKRates();
+      loadGBRates();
+    }, 60000);
   }, []);
 
   function loadRates() {

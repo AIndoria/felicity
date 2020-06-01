@@ -136,44 +136,6 @@
   align-content: flex-start;
 }
 
-@media only screen and (max-width: 1560px) {
-  .CurrencyCards {
-    grid-column: content-h-start/content-h-end;
-    grid-row: content-v-start/content-v-end;
-  }
-}
-
-@media only screen and (max-width: 1112px) {
-  .Landing {
-    height: 250vh;
-  }
-}
-
-@media only screen and (max-width: 825px) {
-  .Landing {
-    height: 275vh;
-    grid-template-columns: [page-h-start logo-start] 2.5fr [logo-end content-h-start] 1.5fr [main-start] 7fr [main-end] 1.5fr [content-h-end] 3fr [page-h-end];
-    grid-template-rows: [page-v-start header-start] 2fr [header-end] 0.5fr [title-start]3fr [title-end content-v-start] 10fr [content-v-end] 1fr [ page-v-end];
-  }
-  .Header__Logo-top {
-    display: none;
-  }
-  .Header__Logo-bottom {
-    display: none;
-  }
-  .Header__Logo-short {
-    display: flex;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    padding-top: 2.5rem;
-  }
-  .Description {
-    height: 100%;
-    grid-column: content-h-start/content-h-end;
-    grid-row: title-start/title-end;
-  }
-}
-
 .countryStyleUS {
   flex: 1;
   font-weight: 600;
@@ -227,7 +189,7 @@
 
 $particleSize: 5vmin;
 $animationDuration: 6s;
-$amount: 3;
+$amount: 5;
 .animation span {
   width: $particleSize;
   height: $particleSize;
@@ -238,7 +200,12 @@ $amount: 3;
   animation-duration: $animationDuration;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  $colors: (rgb(0, 128, 187), rgb(144, 238, 144), rgb(0, 128, 187));
+  $colors: (
+    rgb(231, 124, 2),
+    rgb(144, 238, 144),
+    rgb(226, 81, 81),
+    rgb(0, 128, 187)
+  );
   @for $i from 1 through $amount {
     &:nth-child(#{$i}) {
       color: nth($colors, random(length($colors)));
@@ -247,9 +214,9 @@ $amount: 3;
       animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s;
       animation-delay: random(($animationDuration + 10s) * 10) / 10 * -1s;
       transform-origin: (random(50) - 25) * 1vw (random(50) - 25) * 1vh;
-      $blurRadius: (random() + 0.5) * $particleSize * 0.5;
+      $blurRadius: (random() + 1.5) * $particleSize * 0.75;
       $x: if(random() > 0.5, -1, 1);
-      box-shadow: ($particleSize * 2 * $x) 0 $blurRadius currentColor;
+      box-shadow: ($particleSize * 5 * $x) 0 $blurRadius currentColor;
     }
   }
 }
@@ -257,5 +224,147 @@ $amount: 3;
 @keyframes move {
   100% {
     transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
+// Media queries beyond this point
+
+@media only screen and (max-width: 1560px) {
+  .CurrencyCards {
+    grid-column: content-h-start/content-h-end;
+    grid-row: content-v-start/content-v-end;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .CurrencyCards {
+    grid-column: page-h-start/page-h-end;
+    grid-row: content-v-start/content-v-end;
+  }
+}
+
+@media only screen and (max-width: 1112px) {
+  .Landing {
+    height: 250vh;
+  }
+}
+
+@media only screen and (max-width: 825px) and (orientation: landscape) {
+  .Landing {
+    height: 275vh;
+    grid-template-columns: [page-h-start logo-start] 2.5fr [logo-end content-h-start] 1.5fr [main-start] 7fr [main-end] 1.5fr [content-h-end] 2.5fr [page-h-end];
+    grid-template-rows: [page-v-start header-start] 2fr [header-end] 0.5fr [title-start]3fr [title-end content-v-start] 10fr [content-v-end] 1fr [ page-v-end];
+  }
+  .Header__Logo-top {
+    display: none;
+  }
+  .Header__Logo-bottom {
+    display: none;
+  }
+  .Header__Logo-short {
+    display: flex;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding-top: 2.5rem;
+  }
+  .Header__Title-sub {
+    font-family: "Philosopher", serif;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid white;
+    font-size: 0.95rem;
+  }
+  .Description {
+    height: 100%;
+    grid-column: content-h-start/content-h-end;
+    grid-row: title-start/title-end;
+  }
+  .CurrencyCards {
+    height: 100%;
+    grid-column: main-start/main-end;
+    grid-row: content-v-start/content-v-end;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+  }
+}
+
+@media only screen and (max-width: 825px) and (orientation: portrait) {
+  .Landing {
+    height: 275vh;
+    grid-template-columns: [page-h-start logo-start] 2.5fr [logo-end content-h-start] 1.5fr [main-start] 7fr [main-end] 1.5fr [content-h-end] 2.5fr [page-h-end];
+    grid-template-rows: [page-v-start header-start] 2fr [header-end] 0.5fr [title-start]2fr [title-end content-v-start] 10fr [content-v-end] 1fr [ page-v-end];
+  }
+  .Header__Logo-top {
+    display: none;
+  }
+  .Header__Logo-bottom {
+    display: none;
+  }
+  .Header__Logo-short {
+    display: flex;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding-top: 2.5rem;
+  }
+  .Header__Title-sub {
+    font-family: "Philosopher", serif;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid white;
+    font-size: 0.95rem;
+  }
+  .Description {
+    height: 100%;
+    grid-column: content-h-start/content-h-end;
+    grid-row: title-start/title-end;
+  }
+  .CurrencyCards {
+    height: 100%;
+    grid-column: main-start/main-end;
+    grid-row: content-v-start/content-v-end;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+  }
+}
+
+@media only screen and (max-width: 650px) and (orientation: portrait) {
+  .Landing {
+    height: 275vh;
+    grid-template-columns: [page-h-start logo-start] 2.5fr [logo-end content-h-start] 1.5fr [main-start] 7fr [main-end] 1.5fr [content-h-end] 2.5fr [page-h-end];
+    grid-template-rows: [page-v-start header-start] 2fr [header-end] 0.5fr [title-start]2fr [title-end content-v-start] 10fr [content-v-end] 1fr [ page-v-end];
+  }
+  .Header__Logo-top {
+    display: none;
+  }
+  .Header__Logo-bottom {
+    display: none;
+  }
+  .Header__Logo-short {
+    display: flex;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding-top: 2.5rem;
+  }
+  .Header__Title-sub {
+    font-family: "Philosopher", serif;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid white;
+    font-size: 0.95rem;
+  }
+  .Description {
+    height: 100%;
+    grid-column: page-h-start/ page-h-end;
+    grid-row: title-start/title-end;
+  }
+  .CurrencyCards {
+    height: 100%;
+    grid-column: content-h-start/content-h-end;
+    grid-row: content-v-start/content-v-end;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
   }
 }
