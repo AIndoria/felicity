@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/felicity/static/css/main.cef283cb.chunk.css",
+    "main.css": "/felicity/static/css/main.1d9ce4b0.chunk.css",
     "main.js": "/felicity/static/js/main.b6dcf0fc.chunk.js",
     "main.js.map": "/felicity/static/js/main.b6dcf0fc.chunk.js.map",
     "runtime-main.js": "/felicity/static/js/runtime-main.83b8b67e.js",
@@ -8,16 +8,16 @@
     "static/js/2.feba0ab1.chunk.js": "/felicity/static/js/2.feba0ab1.chunk.js",
     "static/js/2.feba0ab1.chunk.js.map": "/felicity/static/js/2.feba0ab1.chunk.js.map",
     "index.html": "/felicity/index.html",
-    "precache-manifest.6bb8bcbfeebf5aa2fb3ef5c9adbb5557.js": "/felicity/precache-manifest.6bb8bcbfeebf5aa2fb3ef5c9adbb5557.js",
+    "precache-manifest.3018263c7b15d0358bfff448a29a516d.js": "/felicity/precache-manifest.3018263c7b15d0358bfff448a29a516d.js",
     "service-worker.js": "/felicity/service-worker.js",
-    "static/css/main.cef283cb.chunk.css.map": "/felicity/static/css/main.cef283cb.chunk.css.map",
+    "static/css/main.1d9ce4b0.chunk.css.map": "/felicity/static/css/main.1d9ce4b0.chunk.css.map",
     "static/js/2.feba0ab1.chunk.js.LICENSE.txt": "/felicity/static/js/2.feba0ab1.chunk.js.LICENSE.txt",
     "static/media/Landing.scss": "/felicity/static/media/dns_night.cb35d675.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.83b8b67e.js",
     "static/js/2.feba0ab1.chunk.js",
-    "static/css/main.cef283cb.chunk.css",
+    "static/css/main.1d9ce4b0.chunk.css",
     "static/js/main.b6dcf0fc.chunk.js"
   ]
 }
