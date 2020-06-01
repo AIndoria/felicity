@@ -250,49 +250,84 @@ $amount: 5;
   }
 }
 
-@media only screen and (max-width: 825px) and (orientation: landscape) {
+@media only screen and (max-width: 1718px) and (max-height: 1034px) {
   .Landing {
-    height: 275vh;
-    grid-template-columns: [page-h-start logo-start] 2.5fr [logo-end content-h-start] 1.5fr [main-start] 7fr [main-end] 1.5fr [content-h-end] 2.5fr [page-h-end];
-    grid-template-rows: [page-v-start header-start] 2fr [header-end] 0.5fr [title-start]3fr [title-end content-v-start] 10fr [content-v-end] 1fr [ page-v-end];
-  }
-  .Header__Logo-top {
-    display: none;
-  }
-  .Header__Logo-bottom {
-    display: none;
-  }
-  .Header__Logo-short {
-    display: flex;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    padding-top: 2.5rem;
-  }
-  .Header__Title-sub {
-    font-family: "Philosopher", serif;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid white;
-    font-size: 0.95rem;
-  }
-  .Description {
-    height: 100%;
-    grid-column: content-h-start/content-h-end;
-    grid-row: title-start/title-end;
-  }
-  .CurrencyCards {
-    height: 100%;
-    grid-column: main-start/main-end;
-    grid-row: content-v-start/content-v-end;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: flex-start;
+    height: 200vh;
   }
 }
 
+@media only screen and (max-width: 787px) and (max-height: 1787px) {
+  .Landing {
+    height: auto;
+  }
+}
+
+@media only screen and (max-height: 980px) {
+  .Landing {
+    height: auto;
+  }
+}
+
+@media only screen and (max-height: 1771px) {
+  .Landing {
+    height: auto;
+  }
+}
+
+@media only screen and (max-height: 1834px) {
+  .Landing {
+    height: auto;
+  }
+}
+
+@media only screen and (min-height: 1270px) and (max-width: 438px) {
+  .Landing {
+    height: auto;
+  }
+}
+// @media only screen and (max-width: 825px) and (orientation: landscape) {
+//   .Landing {
+//     height: 275vh;
+//     grid-template-columns: [page-h-start logo-start] 2.5fr [logo-end content-h-start] 1.5fr [main-start] 7fr [main-end] 1.5fr [content-h-end] 2.5fr [page-h-end];
+//     grid-template-rows: [page-v-start header-start] 2fr [header-end] 0.5fr [title-start]3fr [title-end content-v-start] 10fr [content-v-end] 1fr [ page-v-end];
+//   }
+//   .Header__Logo-top {
+//     display: none;
+//   }
+//   .Header__Logo-bottom {
+//     display: none;
+//   }
+//   .Header__Logo-short {
+//     display: flex;
+//     writing-mode: vertical-rl;
+//     text-orientation: upright;
+//     padding-top: 2.5rem;
+//   }
+//   .Header__Title-sub {
+//     font-family: "Philosopher", serif;
+//     padding-bottom: 0.5rem;
+//     border-bottom: 1px solid white;
+//     font-size: 0.95rem;
+//   }
+//   .Description {
+//     height: 100%;
+//     grid-column: content-h-start/content-h-end;
+//     grid-row: title-start/title-end;
+//   }
+//   .CurrencyCards {
+//     height: 100%;
+//     grid-column: main-start/main-end;
+//     grid-row: content-v-start/content-v-end;
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     align-content: flex-start;
+//   }
+// }
+
 @media only screen and (max-width: 825px) and (orientation: portrait) {
   .Landing {
-    height: 275vh;
+    height: auto;
     grid-template-columns: [page-h-start logo-start] 2.5fr [logo-end content-h-start] 1.5fr [main-start] 7fr [main-end] 1.5fr [content-h-end] 2.5fr [page-h-end];
     grid-template-rows: [page-v-start header-start] 2fr [header-end] 0.5fr [title-start]2fr [title-end content-v-start] 10fr [content-v-end] 1fr [ page-v-end];
   }
