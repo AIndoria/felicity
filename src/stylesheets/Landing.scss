@@ -66,7 +66,7 @@
   width: 4rem;
   border-radius: 50px;
   position: relative;
-  transition: background-image 0.9s;
+  transition: background-image 0.5s;
 }
 
 .Header__DNC input:before {
@@ -79,17 +79,17 @@
   position: absolute;
   top: 0;
   left: 0;
-  transition: all 0.9s;
+  transition: all 0.5s;
 }
 .Header__DNC input:checked {
   background-image: url(../img/dns_night.jpg);
   background-size: cover;
-  transition: background-image 0.9s;
+  transition: background-image 0.5s;
 }
 .Header__DNC input:checked:before {
   transform: translate(100%);
   box-shadow: -1px 0 3px 1px black;
-  transition: all 0.9s;
+  transition: all 0.5s;
   background-color: brown;
 }
 
@@ -286,9 +286,38 @@ $amount: 5;
   }
 }
 
+@media only screen and (min-height: 1760px) and (max-width: 614px) {
+  .Landing {
+    height: auto;
+  }
+}
+
 @media only screen and (min-height: 0px) and (max-height: 1015px) {
   .Landing {
     height: auto;
+  }
+  .Header__Logo-top {
+    display: flex;
+  }
+  .Header__Logo-bottom {
+    display: flex;
+  }
+
+  .Header__Logo-short {
+    display: none;
+  }
+
+  .Header__Logo {
+    font-family: "Bitter", serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    height: 100%;
+    grid-column: page-h-start/page-h-end;
+    grid-row: content-v-end/page-v-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -372,9 +401,9 @@ $amount: 5;
   }
 }
 
-@media only screen and (max-width: 650px) and (orientation: portrait) {
+@media only screen and (max-width: 650px) {
   .Landing {
-    height: 275vh;
+    height: auto;
     grid-template-columns: [page-h-start logo-start] 2.5fr [logo-end content-h-start] 1.5fr [main-start] 7fr [main-end] 1.5fr [content-h-end] 2.5fr [page-h-end];
     grid-template-rows: [page-v-start header-start] 2fr [header-end] 0.5fr [title-start]2fr [title-end content-v-start] 10fr [content-v-end] 1fr [ page-v-end];
   }
@@ -424,9 +453,9 @@ $amount: 5;
   }
 }
 
-@media only screen and (max-width: 380px) and (orientation: portrait) {
+@media only screen and (max-width: 380px) {
   .Landing {
-    height: 275vh;
+    height: auto;
     grid-template-columns: [page-h-start logo-start] 2.5fr [logo-end content-h-start] 1.5fr [main-start] 7fr [main-end] 1.5fr [content-h-end] 2.5fr [page-h-end];
     grid-template-rows: [page-v-start header-start] 2fr [header-end] 0.5fr [title-start]2fr [title-end content-v-start] 10fr [content-v-end] 1fr [ page-v-end];
   }
@@ -506,7 +535,7 @@ $amount: 5;
     width: 3rem;
     border-radius: 50px;
     position: relative;
-    transition: background-image 0.9s;
+    transition: background-image 0.5s;
   }
 
   .Header__DNC input:before {
@@ -519,17 +548,17 @@ $amount: 5;
     position: absolute;
     top: 0;
     left: 0;
-    transition: all 0.9s;
+    transition: all 0.5s;
   }
   .Header__DNC input:checked {
     background-image: url(../img/dns_night.jpg);
     background-size: cover;
-    transition: background-image 0.9s;
+    transition: background-image 0.5s;
   }
   .Header__DNC input:checked:before {
     transform: translate(100%);
     box-shadow: -1px 0 3px 1px black;
-    transition: all 0.9s;
+    transition: all 0.5s;
     background-color: brown;
   }
 }
