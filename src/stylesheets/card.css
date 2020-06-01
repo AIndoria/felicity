@@ -7,6 +7,8 @@
 .Card__Listings {
   padding-left: 1rem;
   flex: 3;
+  font-family: "Nova Mono", serif;
+  color: white;
 }
 
 .Card__Listings span {
@@ -18,7 +20,19 @@
   text-orientation: mixed;
   padding-top: 1rem;
   padding-right: 1rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card_countryName {
+  flex: 1;
   font-weight: 600;
   color: lightgreen;
   font-size: 1.3rem;
+}
+
+.card_countryCurrency {
+  flex: 1;
+  font-size: 0.75rem;
 }

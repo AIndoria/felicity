@@ -7,7 +7,7 @@ class Card extends Component {
       <div className="Card">
         <div className="Card__Listings">
           <p>
-            USD: <span>{this.props.usdrate}</span>
+            USD:<span>{this.props.usdrate}</span>{" "}
           </p>
           <p>
             GBP:<span>{this.props.gbprate}</span>{" "}
@@ -27,6 +27,7 @@ class Card extends Component {
         </div>
         <div className="Card__Title">
           <div className="card_countryName">{this.props.countryname}</div>
+          <div className="card_countryCurrency">{this.props.currencyName}</div>
         </div>
       </div>
     );

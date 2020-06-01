@@ -31,10 +31,14 @@
   justify-content: center;
 }
 .Header__Title-main {
-  font-family: "Philosopher", sans-serif;
+  font-family: "Nova Mono", sans-serif;
   font-weight: 700;
   font-size: 3rem;
   padding-bottom: 0.5rem;
+}
+
+.Header__Logo-short {
+  display: none;
 }
 
 .Header__DNC {
@@ -88,11 +92,34 @@
   grid-row: title-start/title-end;
 }
 .Description__Text {
-  font-family: "Bitter", serif;
+  font-family: "Anonymous Pro", serif;
+  font-weight: 600;
   height: 100%;
   padding: 1rem;
   line-height: 1.75rem;
 }
+
+.Description__Text a {
+  text-decoration: none;
+  color: lightgreen;
+}
+
+.Description__Text a:hover {
+  animation-duration: 1s;
+  animation-name: linkanimation;
+  animation-fill-mode: forwards;
+}
+
+@keyframes linkanimation {
+  from {
+    text-decoration: none;
+    color: rgb(144, 238, 144);
+  }
+  to {
+    color: rgb(63, 230, 63);
+  }
+}
+
 .CurrencyCards {
   height: 100%;
   grid-column: main-start/main-end;
@@ -101,4 +128,42 @@
   flex-wrap: wrap;
   justify-content: center;
   align-content: flex-start;
+}
+
+@media only screen and (max-width: 1560px) {
+  .CurrencyCards {
+    grid-column: content-h-start/content-h-end;
+    grid-row: content-v-start/content-v-end;
+  }
+}
+
+@media only screen and (max-width: 1112px) {
+  .Landing {
+    height: 250vh;
+  }
+}
+
+@media only screen and (max-width: 825px) {
+  .Landing {
+    height: 275vh;
+    grid-template-columns: [page-h-start logo-start] 2.5fr [logo-end content-h-start] 1.5fr [main-start] 7fr [main-end] 1.5fr [content-h-end] 3fr [page-h-end];
+    grid-template-rows: [page-v-start header-start] 2fr [header-end] 0.5fr [title-start]3fr [title-end content-v-start] 10fr [content-v-end] 1fr [ page-v-end];
+  }
+  .Header__Logo-top {
+    display: none;
+  }
+  .Header__Logo-bottom {
+    display: none;
+  }
+  .Header__Logo-short {
+    display: flex;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding-top: 2.5rem;
+  }
+  .Description {
+    height: 100%;
+    grid-column: content-h-start/content-h-end;
+    grid-row: title-start/title-end;
+  }
 }
