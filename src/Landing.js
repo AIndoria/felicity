@@ -163,6 +163,7 @@ function Landing() {
       </div>
       <div className="CurrencyCards">
         <Card
+          className="cardfirst"
           dayNightMode={mode === "light" ? "#2e2e2e" : "white"}
           countryColor="countryStyleUS"
           countryname="UNITED STATES"

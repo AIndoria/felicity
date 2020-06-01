@@ -4,6 +4,7 @@
   display: flex;
   border: 1px solid grey;
 }
+
 .Card__Listings {
   padding-left: 1rem;
   flex: 3;
