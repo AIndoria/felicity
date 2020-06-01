@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./stylesheets/Landing.css";
 import Card from "./Card";
-import NumberFormat from "react-number-format";
-export const mode = "light";
+// import Flicker from "react-flicker-text";
+// import FlickerText from "react-flicker-text";
 
 function Landing() {
   const [mode, setMode] = useState("dark");
