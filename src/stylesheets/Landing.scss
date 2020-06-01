@@ -285,6 +285,13 @@ $amount: 5;
     height: auto;
   }
 }
+
+@media only screen and (min-height: 0px) and (max-height: 1015px) {
+  .Landing {
+    height: auto;
+  }
+}
+
 // @media only screen and (max-width: 825px) and (orientation: landscape) {
 //   .Landing {
 //     height: 275vh;
