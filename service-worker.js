@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/felicity/precache-manifest.52f1e3da727d41b6337e7a22a4c37c0a.js"
+  "/felicity/precache-manifest.e66234f8ed5ed98025700234f24e9f44.js"
 );
 
 self.addEventListener('message', (event) => {
