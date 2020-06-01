@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/felicity/static/css/main.729c4d9a.chunk.css",
+    "main.js": "/felicity/static/js/main.fbb48be4.chunk.js",
+    "main.js.map": "/felicity/static/js/main.fbb48be4.chunk.js.map",
+    "runtime-main.js": "/felicity/static/js/runtime-main.83b8b67e.js",
+    "runtime-main.js.map": "/felicity/static/js/runtime-main.83b8b67e.js.map",
+    "static/js/2.feba0ab1.chunk.js": "/felicity/static/js/2.feba0ab1.chunk.js",
+    "static/js/2.feba0ab1.chunk.js.map": "/felicity/static/js/2.feba0ab1.chunk.js.map",
+    "index.html": "/felicity/index.html",
+    "precache-manifest.bdc50fb228b5f2d99e560f78405af7b0.js": "/felicity/precache-manifest.bdc50fb228b5f2d99e560f78405af7b0.js",
+    "service-worker.js": "/felicity/service-worker.js",
+    "static/css/main.729c4d9a.chunk.css.map": "/felicity/static/css/main.729c4d9a.chunk.css.map",
+    "static/js/2.feba0ab1.chunk.js.LICENSE.txt": "/felicity/static/js/2.feba0ab1.chunk.js.LICENSE.txt",
+    "static/media/Landing.scss": "/felicity/static/media/dns_night.cb35d675.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.83b8b67e.js",
+    "static/js/2.feba0ab1.chunk.js",
+    "static/css/main.729c4d9a.chunk.css",
+    "static/js/main.fbb48be4.chunk.js"
+  ]
+}
