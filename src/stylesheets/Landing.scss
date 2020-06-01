@@ -337,17 +337,29 @@ $amount: 5;
     grid-template-rows: [page-v-start header-start] 2fr [header-end] 0.5fr [title-start]2fr [title-end content-v-start] 10fr [content-v-end] 1fr [ page-v-end];
   }
   .Header__Logo-top {
-    display: none;
+    display: flex;
   }
   .Header__Logo-bottom {
+    display: flex;
+  }
+
+  .Header__Logo-short {
     display: none;
   }
-  .Header__Logo-short {
+
+  .Header__Logo {
+    font-family: "Bitter", serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    height: 100%;
+    grid-column: main-start / main-end;
+    grid-row: content-v-end/page-v-end;
     display: flex;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    padding-top: 2.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
+
   .Header__Title-sub {
     font-family: "Philosopher", serif;
     padding-bottom: 0.5rem;
@@ -367,5 +379,115 @@ $amount: 5;
     flex-wrap: wrap;
     justify-content: center;
     align-content: flex-start;
+  }
+}
+
+@media only screen and (max-width: 380px) and (orientation: portrait) {
+  .Landing {
+    height: 275vh;
+    grid-template-columns: [page-h-start logo-start] 2.5fr [logo-end content-h-start] 1.5fr [main-start] 7fr [main-end] 1.5fr [content-h-end] 2.5fr [page-h-end];
+    grid-template-rows: [page-v-start header-start] 2fr [header-end] 0.5fr [title-start]2fr [title-end content-v-start] 10fr [content-v-end] 1fr [ page-v-end];
+  }
+  .Header__Title {
+    color: #8ee3f8;
+    height: 100%;
+    grid-column: content-h-start / main-end;
+    grid-row: header-start / header-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Header__Logo-top {
+    display: flex;
+  }
+  .Header__Logo-bottom {
+    display: flex;
+  }
+
+  .Header__Logo-short {
+    display: none;
+  }
+
+  .Header__Logo {
+    font-family: "Bitter", serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    height: 100%;
+    grid-column: page-h-start/page-h-end;
+    grid-row: content-v-end/page-v-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Header__Title-sub {
+    font-family: "Philosopher", serif;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid white;
+    font-size: 0.95rem;
+  }
+  .Description {
+    height: 100%;
+    grid-column: page-h-start/ page-h-end;
+    grid-row: title-start/title-end;
+  }
+  .CurrencyCards {
+    height: 100%;
+    grid-column: page-h-start/page-h-end;
+    grid-row: content-v-start/content-v-end;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+  }
+
+  .Header__DNC {
+    grid-column: content-h-end / page-h-end;
+    grid-row: header-start / header-end;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 1rem;
+  }
+
+  .Header__DNC input {
+    margin: 2.5rem;
+    appearance: none;
+    outline: none;
+    background-image: url(../img/dns_day.jpg);
+    background-size: cover;
+    height: 1.5rem;
+    width: 3rem;
+    border-radius: 50px;
+    position: relative;
+    transition: background-image 0.9s;
+  }
+
+  .Header__DNC input:before {
+    content: "";
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 1px 0 3px 1px black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.9s;
+  }
+  .Header__DNC input:checked {
+    background-image: url(../img/dns_night.jpg);
+    background-size: cover;
+    transition: background-image 0.9s;
+  }
+  .Header__DNC input:checked:before {
+    transform: translate(100%);
+    box-shadow: -1px 0 3px 1px black;
+    transition: all 0.9s;
+    background-color: brown;
   }
 }
