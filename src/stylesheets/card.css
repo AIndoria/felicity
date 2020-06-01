@@ -33,6 +33,15 @@
 }
 
 .card_countryCurrency {
+  letter-spacing: 1px;
+  color: rgb(233, 233, 233);
   flex: 1;
   font-size: 0.75rem;
+}
+
+.Card__Listings-Day {
+  padding-left: 1rem;
+  flex: 3;
+  font-family: "Nova Mono", serif;
+  color: black;
 }

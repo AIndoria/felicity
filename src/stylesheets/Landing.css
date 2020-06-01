@@ -21,7 +21,7 @@
 }
 
 .Header__Title {
-  color: #d35c20;
+  color: #8ee3f8;
   height: 100%;
   grid-column: main-start / main-end;
   grid-row: header-start / header-end;
@@ -35,6 +35,10 @@
   font-weight: 700;
   font-size: 3rem;
   padding-bottom: 0.5rem;
+}
+
+.Header__Title-sub {
+  font-family: "Philosopher", serif;
 }
 
 .Header__Logo-short {
@@ -166,4 +170,53 @@
     grid-column: content-h-start/content-h-end;
     grid-row: title-start/title-end;
   }
+}
+
+.countryStyleUS {
+  flex: 1;
+  font-weight: 600;
+  color: rgb(226, 81, 81);
+  font-size: 1.3rem;
+}
+
+.countryStyleEU {
+  flex: 1;
+  font-weight: 600;
+  color: rgb(0, 128, 187);
+  font-size: 1.3rem;
+}
+
+.countryStyleUK {
+  flex: 1;
+  font-weight: 600;
+  color: rgb(173, 2, 173);
+  font-size: 1.3rem;
+}
+
+.countryStyleHK {
+  flex: 1;
+  font-weight: 600;
+  color: rgb(144, 238, 144);
+  font-size: 1.3rem;
+}
+
+.countryStyleIN {
+  flex: 1;
+  font-weight: 600;
+  color: rgb(231, 124, 2);
+  font-size: 1.3rem;
+}
+
+.countryStyleJP {
+  flex: 1;
+  font-weight: 600;
+  color: rgb(233, 233, 233);
+  font-size: 1.3rem;
+}
+
+.countryStyleDAY {
+  flex: 1;
+  font-weight: 600;
+  color: rgb(42, 28, 28);
+  font-size: 1.3rem;
 }

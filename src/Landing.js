@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./stylesheets/Landing.css";
 import Card from "./Card";
 import NumberFormat from "react-number-format";
+export const mode = "light";
 
 function Landing() {
   const [mode, setMode] = useState("dark");
@@ -124,7 +125,10 @@ function Landing() {
         <div className="Header__Logo-bottom">NORTH AMERICA</div>
         <div className="Header__Logo-short">ILNA</div>
       </div>
-      <div className="Header__Title">
+      <div
+        className="Header__Title"
+        style={{ color: mode === "light" ? "black" : "#8ee3f8" }}
+      >
         <div className="Header__Title-main">FELICITY</div>
         <div className="Header__Title-sub">Current Currency Exchange Rates</div>
       </div>
@@ -134,11 +138,15 @@ function Landing() {
       <div className="Description">
         <div
           className="Description__Text"
-          style={{ color: mode === "light" ? "black" : "#d7d7d7" }}
+          style={{ color: mode === "light" ? "#2e2e2e" : "#d7d7d7" }}
         >
           Access real-time rates for all the major FX pairs. Rates are accessd
           from{" "}
-          <a alt="European Central Bank Link" href="https://www.ecb.europa.eu">
+          <a
+            alt="European Central Bank Link"
+            href="https://www.ecb.europa.eu"
+            style={{ color: mode === "light" ? "#015c3a" : "#90ee90" }}
+          >
             European Central Bank
           </a>{" "}
           and are updated every 60 seconds. Currently, major currency pairs are
@@ -147,6 +155,8 @@ function Landing() {
       </div>
       <div className="CurrencyCards">
         <Card
+          dayNightMode={mode === "light" ? "#2e2e2e" : "white"}
+          countryColor="countryStyleUS"
           countryname="UNITED STATES"
           currencyName="United States Dollar"
           usdrate={americanRate.USD}
@@ -157,6 +167,8 @@ function Landing() {
           inrrate={americanRate.INR}
         ></Card>
         <Card
+          dayNightMode={mode === "light" ? "#2e2e2e" : "white"}
+          countryColor="countryStyleEU"
           countryname="EUROPEAN UNION"
           currencyName="Euro"
           usdrate={euRate.USD}
@@ -167,6 +179,8 @@ function Landing() {
           inrrate={euRate.INR}
         ></Card>
         <Card
+          dayNightMode={mode === "light" ? "#2e2e2e" : "white"}
+          countryColor={mode === "light" ? "countryStyleDAY" : "countryStyleJP"}
           countryname="JAPAN"
           currencyName="Japanese Yen"
           usdrate={jpyRate.USD}
@@ -177,6 +191,8 @@ function Landing() {
           inrrate={jpyRate.INR}
         ></Card>
         <Card
+          dayNightMode={mode === "light" ? "#2e2e2e" : "white"}
+          countryColor="countryStyleHK"
           countryname="HONG KONG"
           currencyName="Hong Kong Dollar"
           usdrate={hkdRate.USD}
@@ -187,6 +203,8 @@ function Landing() {
           inrrate={hkdRate.INR}
         ></Card>
         <Card
+          dayNightMode={mode === "light" ? "#2e2e2e" : "white"}
+          countryColor="countryStyleUK"
           countryname="UNITED KINGDOM"
           currencyName="Pound Sterling"
           usdrate={gbpRate.USD}
@@ -197,6 +215,8 @@ function Landing() {
           inrrate={gbpRate.INR}
         ></Card>
         <Card
+          dayNightMode={mode === "light" ? "#2e2e2e" : "white"}
+          countryColor="countryStyleIN"
           countryname="INDIA"
           currencyName="Indian Rupee"
           usdrate={inrRate.USD}

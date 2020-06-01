@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import "./stylesheets/card.css";
+import { mode } from "./Landing";
 
 class Card extends Component {
   render() {
     return (
       <div className="Card">
-        <div className="Card__Listings">
+        <div
+          className="Card__Listings"
+          style={{ color: this.props.dayNightMode }}
+        >
           <p>
             USD:<span>{this.props.usdrate}</span>{" "}
           </p>
@@ -26,8 +30,15 @@ class Card extends Component {
           </p>
         </div>
         <div className="Card__Title">
-          <div className="card_countryName">{this.props.countryname}</div>
-          <div className="card_countryCurrency">{this.props.currencyName}</div>
+          <div className={this.props.countryColor}>
+            {this.props.countryname}
+          </div>
+          <div
+            className="card_countryCurrency"
+            style={{ color: this.props.dayNightMode }}
+          >
+            {this.props.currencyName}
+          </div>
         </div>
       </div>
     );
