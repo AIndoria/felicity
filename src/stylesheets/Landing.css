@@ -39,6 +39,8 @@
 
 .Header__Title-sub {
   font-family: "Philosopher", serif;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid white;
 }
 
 .Header__Logo-short {

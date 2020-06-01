@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./stylesheets/card.css";
 import { mode } from "./Landing";
+import Flicker from "./scripts/Flicker";
+import FlickerText from "./scripts/FlickerText";
 
 class Card extends Component {
   render() {
@@ -31,13 +33,13 @@ class Card extends Component {
         </div>
         <div className="Card__Title">
           <div className={this.props.countryColor}>
-            {this.props.countryname}
+            <FlickerText>{this.props.countryname}</FlickerText>
           </div>
           <div
             className="card_countryCurrency"
             style={{ color: this.props.dayNightMode }}
           >
-            {this.props.currencyName}
+            <FlickerText>{this.props.currencyName}</FlickerText>
           </div>
         </div>
       </div>

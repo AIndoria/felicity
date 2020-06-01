@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./stylesheets/Landing.css";
 import Card from "./Card";
-// import Flicker from "react-flicker-text";
-// import FlickerText from "react-flicker-text";
+import Flicker from "./scripts/Flicker";
+import FlickerText from "./scripts/FlickerText";
+
+const alternativeChars =
+  "!\"#$%'()*+,-./0123456789:;?@`aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ{[|}]~^_";
 
 function Landing() {
   const [mode, setMode] = useState("dark");
@@ -30,14 +33,14 @@ function Landing() {
     loadINRates();
     loadHKRates();
     loadGBRates();
-    setInterval(() => {
-      loadRates();
-      loadEURates();
-      loadJPRates();
-      loadINRates();
-      loadHKRates();
-      loadGBRates();
-    }, 60000);
+    // setInterval(() => { //disabled while testing
+    //   loadRates();
+    //   loadEURates();
+    //   loadJPRates();
+    //   loadINRates();
+    //   loadHKRates();
+    //   loadGBRates();
+    // }, 60000);
   }, []);
 
   function loadRates() {
@@ -140,8 +143,10 @@ function Landing() {
           className="Description__Text"
           style={{ color: mode === "light" ? "#2e2e2e" : "#d7d7d7" }}
         >
-          Access real-time rates for all the major FX pairs. Rates are accessd
-          from{" "}
+          <FlickerText characters={alternativeChars}>
+            Access real-time rates for all the major FX pairs. Rates are accessd
+            from
+          </FlickerText>{" "}
           <a
             alt="European Central Bank Link"
             href="https://www.ecb.europa.eu"
@@ -149,8 +154,10 @@ function Landing() {
           >
             European Central Bank
           </a>{" "}
-          and are updated every 60 seconds. Currently, major currency pairs are
-          USD, GBP, EUR, JPY, HKD, and INR.
+          <FlickerText characters={alternativeChars}>
+            and are updated every 60 seconds. Currently, major currency pairs
+            are USD, GBP, EUR, JPY, HKD, and INR.
+          </FlickerText>
         </div>
       </div>
       <div className="CurrencyCards">
