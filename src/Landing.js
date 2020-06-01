@@ -41,7 +41,7 @@ function Landing() {
       loadINRates();
       loadHKRates();
       loadGBRates();
-    }, 60000);
+    }, 300000);
   }, []);
 
   function loadRates() {
@@ -156,14 +156,13 @@ function Landing() {
             European Central Bank
           </a>{" "}
           <FlickerText characters={alternativeChars}>
-            and are updated every 60 seconds. Currently, major currency pairs
-            are USD, GBP, EUR, JPY, HKD, and INR.
+            and are updated every five(5) minutes. Currently, major currency
+            pairs are USD, GBP, EUR, JPY, HKD, and INR.
           </FlickerText>
         </div>
       </div>
       <div className="CurrencyCards">
         <Card
-          className="cardfirst"
           dayNightMode={mode === "light" ? "#2e2e2e" : "white"}
           countryColor="countryStyleUS"
           countryname="UNITED STATES"
