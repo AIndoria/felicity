@@ -13,8 +13,10 @@ Welcome to Felicity, a project I whipped up during a Saturday and Sunday night, 
 Clone the project using either:
 
 > HTTPS: `https://github.com/AIndoria/felicity.git`
+
 >  SSH: `git@github.com:AIndoria/felicity.git`
->  
+
+
 Navigate to the felicity directory and type `npm install`
 
 ### Future To-dos
